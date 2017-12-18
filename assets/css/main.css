@@ -1,0 +1,17 @@
+nav button {
+    width: 100%;
+}
+
+.modals {
+    display: none;
+}
+
+.modals .glyphicon-remove {
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
