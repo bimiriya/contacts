@@ -25,9 +25,11 @@
               </button>
             </div>
             <div class="col-lg-6">
-              <button class="btn btn-danger">
-                <span class="glyphicon glyphicon-minus"></span>
-              </button>
+              <div id="search">
+                <button class="btn btn-info">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </div>
             </div>
           </div>
         </nav>
@@ -47,21 +49,17 @@
             <div class="row">
               <div class="col-lg-6 text-right">
                 <span class="glyphicon glyphicon-user"></span>
-                <input type="text" placeholder="Name">
+                <input class="name" type="text" placeholder="Name">
               </div>
               <div class="col-lg-6 text-left">
                 <span class="glyphicon glyphicon-earphone"></span>
-                <input id="num" type="number" placeholder="10 digits" maxlength="10">
+                <input class="num" id="num" type="number" placeholder="10 digits" maxlength="10">
               </div>
               </div>
               <div class="row">
-                <div class="col-lg-6 text-right">
+                <div class="col-lg-12 text-center">
                   <span class="glyphicon glyphicon-envelope"></span>
-                  <input type="text" placeholder="E-mail">
-                </div>
-                <div class="col-lg-6 text-left">
-                  <span>@</span>
-                  <input id="ay" type="number" placeholder="example.com">
+                  <input class="email" type="text" placeholder="E-mail">
                 </div>
               </div>
               <div class="row">
@@ -75,9 +73,12 @@
       </div>
     </section>
 
-    <section id="filler">
-      
-    </section>
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+        <ol id="filler" class="list-unstyled"></ol>
+      </div>
+    </div>
+    
   </div>
   <script
   src="https://code.jquery.com/jquery-3.2.1.js"

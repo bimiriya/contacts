@@ -2,6 +2,15 @@ nav button {
     width: 100%;
 }
 
+nav .input-group {
+    box-shadow: 1px #43bde1;
+}
+
+nav .input-group span {
+    background: #43bde1;
+    color: white;
+}
+
 .modals {
     display: none;
 }
@@ -14,4 +23,9 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+#filler li {
+    border: 1px solid black;
+    margin: 5px 0;
 }
