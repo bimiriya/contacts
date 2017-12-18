@@ -8,14 +8,31 @@ $(document).ready(function() {
         $(".modals").hide();
     })
 
+
     $(".add-btn").click(function() {
-        $("input").each(function() {
-            if ($(this).val().length == 0) {
-                $(".modals button").attr("disable",true);
-            } else {
-                $(".modals").hide();
-            }
-        })
+
+        if ($("input").val() == "") {
+            $(".modals button").attr("disable",true);
+        } else {
+            $(".modals").hide();
+            $("#filler").prepend("<li><button class='btn btn-default glyphicon glyphicon-trash'></button><h1>" + $(".name").val() + 
+            "</h1><h2>" + $(".num").val() + 
+            "</h2><span>" + $(".email").val() + 
+            "</span></li>");
+    
+            $("input").val("");
+    
+            $("#filler .glyphicon-trash").click(function() {
+                var parents = $(this).parent();
+                parents.remove();
+            })
+        }
+
+        $("nav h1 span").show();
+        function count(counter) {
+            $("nav h1 span span").html(counter);
+        }
+        count($("#filler li").length)
 
         document.getElementById("num").oninput = function () {
             if (this.value.length > 10) {
@@ -23,17 +40,7 @@ $(document).ready(function() {
             }
         }
 
-        $("#filler").prepend("<li><button class='btn btn-default glyphicon glyphicon-trash'></button><h1>" + $(".name").val() + 
-        "</h1><h2>" + $(".num").val() + 
-        "</h2><span>" + $(".email").val() + 
-        "</span></li>");
-
-        $("input").val("");
-
-        $("#filler .glyphicon-trash").click(function() {
-            var parents = $(this).parent();
-            parents.remove();
-        })
+        
 
     })
 
@@ -62,6 +69,5 @@ $(document).ready(function() {
        listFilter($("#filler"));
      });
     })
-
 
 })
