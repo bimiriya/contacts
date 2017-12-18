@@ -4,11 +4,9 @@ $(document).ready(function() {
         $("#modal-add").show()
     })
 
-    document.getElementById("num").oninput = function () {
-        if (this.value.length > 10) {
-            this.value = this.value.slice(0,10); 
-        }
-    }
+    $(".modals .glyphicon-remove").click(function() {
+        $(".modals").hide();
+    })
 
     $(".add-btn").click(function() {
         $("input").each(function() {
@@ -19,9 +17,13 @@ $(document).ready(function() {
             }
         })
 
+        document.getElementById("num").oninput = function () {
+            if (this.value.length > 10) {
+                this.value = this.value.slice(0,10); 
+            }
+        }
 
-        
-        $("#filler").prepend("<li><div><button class='btn btn-default glyphicon glyphicon-trash'></button></div><h1>" + $(".name").val() + 
+        $("#filler").prepend("<li><button class='btn btn-default glyphicon glyphicon-trash'></button><h1>" + $(".name").val() + 
         "</h1><h2>" + $(".num").val() + 
         "</h2><span>" + $(".email").val() + 
         "</span></li>");
@@ -33,10 +35,6 @@ $(document).ready(function() {
             parents.remove();
         })
 
-    })
-    
-    $(".modals .glyphicon-remove").click(function() {
-        $(".modals").hide();
     })
 
     $(".btn-info").click(function() {
