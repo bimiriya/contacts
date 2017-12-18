@@ -25,11 +25,67 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
+#filler {
+    margin-top: 2em;
+}
+
 #filler li {
-    border: 1px solid black;
+    border: 1px solid #18c658;
+    border-radius: 5px;
     margin: 5px 0;
 }
 
 nav h1 span {
     display: none;
+}
+
+#add {
+    border: 3px dashed #18c658;
+    border-radius: 5px;
+    margin: 1em 0 ;
+    padding: 1em 2em 2em;
+}
+
+#add .glyphicon {
+    color: #18c658;
+}
+
+#add .name, .num {
+    width: 65%;
+}
+
+#add .email {
+    width: 70%;
+    margin: 10px 0;
+}
+
+#add button {
+    width: 75%;
+    margin-top: 1em;
+}
+
+#add input {
+    border-radius: 4px;
+    font-size: 16px;
+    border: 1px solid #18c658;
+}
+
+#add h2 {
+    margin-bottom: 1em;
+}
+
+#filler li span {
+    color: #18c658;
+    margin: 0 1em;
+}
+
+.green {
+    color: #18c658;
+}
+
+.glyphicon-trash {
+    width: 100%;
+    margin-top: 10%;
+    padding: 20%;
+    font-size: 1em;
 }
